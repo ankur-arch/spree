@@ -85045,6 +85045,9 @@ components:
           nullable: true
         promotionable:
           type: boolean
+          description: 'Deprecated: Exclude products from a promotion with a product
+            or category rule whose `match_policy` is `none`. Removed in 6.5.'
+          deprecated: true
         tags:
           type: array
           items:
@@ -85347,6 +85350,9 @@ components:
           nullable: true
         promotionable:
           type: boolean
+          description: 'Deprecated: Exclude products from a promotion with a product
+            or category rule whose `match_policy` is `none`. Removed in 6.5.'
+          deprecated: true
         tags:
           type: array
           items:
