@@ -274,8 +274,8 @@ export type PackageTypeFields = Filter.RangeFilters<'created_at' | 'updated_at'>
 export type PaymentFields = Filter.RangeFilters<'amount' | 'created_at' | 'updated_at'>
   & Filter.TextFilters<'avs_response' | 'cvv_response_code' | 'cvv_response_message' | 'response_code'>
   & Filter.IdFilters<'id'>
-  & Filter.EnumFilters<'state', 'checkout' | 'processing' | 'pending' | 'completed' | 'failed' | 'void' | 'invalid'>
-  & Filter.EnumFilters<'status', 'checkout' | 'processing' | 'pending' | 'completed' | 'failed' | 'void' | 'invalid'>
+  & Filter.EnumFilters<'state', 'checkout' | 'processing' | 'pending' | 'requested' | 'completed' | 'failed' | 'void' | 'invalid'>
+  & Filter.EnumFilters<'status', 'checkout' | 'processing' | 'pending' | 'requested' | 'completed' | 'failed' | 'void' | 'invalid'>
 
 export type PaymentMethodFields = Filter.BooleanFilters<'active' | 'storefront_visible'>
   & Filter.RangeFilters<'created_at' | 'updated_at'>
