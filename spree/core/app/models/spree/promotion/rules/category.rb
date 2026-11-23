@@ -52,7 +52,12 @@ module Spree
         end
 
         def eligible?(order, _options = {})
-          return true if eligible_category_ids.empty?
+          # No categories picked yet matches no order, so an order-level
+          # action cannot discount everything.
+          if eligible_category_ids.empty?
+            eligibility_errors.add(:base, eligibility_error_message(:no_matching_taxons))
+            return false
+          end
 
           order_category_ids_with_ancestors = category_ids_in_order_including_ancestors(order)
 
